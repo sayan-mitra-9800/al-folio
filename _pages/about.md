@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: BTech + MTech in <a href = 'https://www.ee.iitm.ac.in/'>Electrical Engineering</a> at <a href = 'https://www.iitm.ac.in/'>IIT Madras</a> # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -19,8 +19,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here, but where?. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I am Sayan. I am currently working as an AI engineer at [KLA-Tencor](https://www.kla.com/).
+I spend half my time preventing models from over-fitting (The other half goes in preventing under-fitting).
+I am interested in a lot of things - math, science, AI (obviously), politics, sociology, anthropology, philosophy, etc.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+One of my keen interests is trying to understand how the human brain works (Yes, my background in electronics makes me appreciate harware, especially ones that run on coffee!). Although I am critical of the way modern AI-research is conducted, I believe it provides a framework to understand the macroscopic behaviour of the brain and intelligence.
+
+This website is mainly intended to be a blog as I dabble though tech, ai, and other things that will put her to sleep.
