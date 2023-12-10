@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+permalink: /thoughts/
+title: thoughts
+description: Thoughts of a 20-something-year-old
 nav: true
 nav_order: 5
 ---
