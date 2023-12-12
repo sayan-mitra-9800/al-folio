@@ -9,7 +9,7 @@ nav_order: 2
 
 <!-- Html Elements for Search -->
 <div id="search-container" style="text-align: center !important; height: 150px width: 10000px">
-<input type="text" id="search-input" placeholder="search...">
+<input type="text" id="search-input" placeholder="Search ↵">
 <ul id="results-container"></ul>
 </div>
 
