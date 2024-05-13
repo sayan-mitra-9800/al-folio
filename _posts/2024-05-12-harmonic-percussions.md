@@ -1,7 +1,6 @@
 ---
 layout: distill
 title: Why tablas are actually guitars
-permalink: harmonic_percussions
 description: How to achieve harmonic percussions
 tags: music
 categories: science
@@ -42,7 +41,7 @@ Listen to these two instruments -
     </div>
 </div>
 </div>
-The first instrument is a tabla - an Indian percussion instrument and the second instrument is ofcourse the western drum.
+The first instrument is a tabla - an Indian percussion instrument and the second instrument is of course the western drum.
 Tablas are able to produce a sustained **harmonic** sound. This is fundamentally different from the sounds produced by western percussion instruments that generally tend to produce quick beats in succession.
 The design of the tabla however, does not seem to suggest any _special_ capabilities that would make it stand out. How then is the tabla able to produce a sustained harmonic tone, like string instruments?
 <div class="row mt-3">
@@ -72,7 +71,7 @@ The general wave equation, $u$ is the displacement, $t$ is time and $v$ is the s
 </div>
 
 ## String Instruments
-The case of string instruments are particularly easy to solve as we only have to worry about the wave propgation in one dimention.
+The case of string instruments are particularly easy to solve as we only have to worry about the wave propagation in one dimension.
 The standing wave solution comes out to be -
 
 $$
@@ -91,7 +90,7 @@ $$
 <div class="caption">
 Condition imposed on the frequency of a string, where $n$ is an integer
 </div>
-Now for $$n = {1, 2, ..}$$ we get valid solutions for the standing wave eqation. The $$n = 1$$ frequency is the **fundamental frequency** and $$n = 2, 3, ..$$ are the overtones. Generally, the fundamental frequency is the loudest that can be heard. The fundamental frequency of string instruments can be set by adjusting the thickness of the string and how tight it is. The equation for $$v$$ is $$v = \sqrt{\frac{T}{\mu}}$$ where $$T$$ is the tension in the string and $$\mu$$ is the linear mass density. <d-footnote><a href = "https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/16-3-wave-speed-on-a-stretched-string/#:~:text=The%20speed%20of%20a%20pulse%20or%20wave%20on,is%20the%20mass%20per%20length%20of%20the%20string.">Derivation for speed of wave in a string</a></d-footnote>
+Now for $$n = {1, 2, ..}$$ we get valid solutions for the standing wave equation. The $$n = 1$$ frequency is the **fundamental frequency** and $$n = 2, 3, ..$$ are the overtones. Generally, the fundamental frequency is the loudest that can be heard. The fundamental frequency of string instruments can be set by adjusting the thickness of the string and how tight it is. The equation for $$v$$ is $$v = \sqrt{\frac{T}{\mu}}$$ where $$T$$ is the tension in the string and $$\mu$$ is the linear mass density. <d-footnote><a href = "https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/16-3-wave-speed-on-a-stretched-string/#:~:text=The%20speed%20of%20a%20pulse%20or%20wave%20on,is%20the%20mass%20per%20length%20of%20the%20string.">Derivation for speed of wave in a string</a></d-footnote>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/Standing_waves_on_a_string.gif" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -105,16 +104,16 @@ Now for $$n = {1, 2, ..}$$ we get valid solutions for the standing wave eqation.
 
 ## Harmonics
 When an instrument produces frequencies that are integer multiples of the fundamental, the sound is thus harmonic.
-Musical intruments like the guitar are harmonic as they are string instruments. Notice how the wave equation is a linear equation, which means that if $$u_1$$ and $$u_2$$ are valid solutions then $$a u_1 + b u_2$$ is also a valid solution. That means the actual solution for a string instrument is an infinite sum for all the harmonic frequencies with different amplitudes. The relative amplitudes of the overtones are what enable us to distinguish between different instruments. This is what we refer to as **timbre**.
+Musical instruments like the guitar are harmonic as they are string instruments. Notice how the wave equation is a linear equation, which means that if $$u_1$$ and $$u_2$$ are valid solutions then $$a u_1 + b u_2$$ is also a valid solution. That means the actual solution for a string instrument is an infinite sum for all the harmonic frequencies with different amplitudes. The relative amplitudes of the overtones are what enable us to distinguish between different instruments. This is what we refer to as **timbre**.
 
 ## Percussion Instruments
-The sounds produced by a percussion intrument comes from a vibrating membrane. If we asume the membrane to have uniform thickness we can attempt to solve the wave equation in **cylindrical coordinates**. Using the Jacobian we get - 
+The sounds produced by a percussion instrument comes from a vibrating membrane. If we assume the membrane to have uniform thickness we can attempt to solve the wave equation in **cylindrical coordinates**. Using the Laplacian we get - 
 
 $$
 \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} = \frac{1}{v^2} \frac{\partial^2 u}{\partial t^2}
 $$
 
-Taking inspiration from the linear solution we can infer that $$v^2 = \frac{\tau}{\rho}$$, where $$\tau$$ is the tension per unit length and $$\rho$$ is the surface mass density ($$v$$ is the speed of the wave as discused before).
+Taking inspiration from the linear solution we can infer that $$v^2 = \frac{\tau}{\rho}$$, where $$\tau$$ is the tension per unit length and $$\rho$$ is the surface mass density ($$v$$ is the speed of the wave as discussed before).
 Just like the linear case, if we assume that the surface mass density is constant (western drums) and apply the boundary condition that the rim of the instrument is stationary, then surprisingly we **do not** get integer multiple solutions to the fundamental frequency.
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -138,8 +137,8 @@ How then are tablas able to produce a harmonic sound? Well the answer lies on th
         {% include figure.html path="assets/img/TablaImage.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Notice a black circle on the membrane called the _Syahi_. The _Syahi_ is not just a design on the membrane but serves a crutial purpose. It is made with a mixture of flour, water and iron filings. This means that it carries a **non negligble mass** that does not cover the entire surface. This makes the surface mass density **non uniform** that changes the solution to the wave equation in cylindrical coordinates.
+Notice a black circle on the membrane called the _Syahi_. The _Syahi_ is not just a design on the membrane but serves a crucial purpose. It is made with a mixture of flour, water and iron filings. This means that it carries a **non negligible mass** that does not cover the entire surface. This makes the surface mass density **non uniform** that changes the solution to the wave equation in cylindrical coordinates.
 The solution to such an equation is quite complicated and thus a computational solution is required. 
-When accounted for the non uniformity of the _Syahi_ the overtone frequences are found to be integer multiples of the fundamental, thus making it **harmonic like a guitar**.
+When accounted for the non uniformity of the _Syahi_ the overtone frequencies are found to be integer multiples of the fundamental, thus making it **harmonic like a guitar**.
 
 Sir C. V. Raman was the first to notice and publish<d-cite key="CVR"></d-cite> this phenomenon in 'Proceeding of Indian Academy of Sciences' in 1934.
