@@ -5,7 +5,7 @@ description: How to achieve harmonic percussions
 tags: music
 categories: science
 featured: false
-giscus_comments: true
+disqus_comments: true
 related_posts: false
 
 bibliography: 2024-05-12-harmonic.bib
@@ -30,7 +30,7 @@ _styles: >
   }
 ---
 ## What is a tabla
-Listen to these two instruments - 
+Listen to these two instruments -
 <div class = "move-up">
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -107,7 +107,7 @@ When an instrument produces frequencies that are integer multiples of the fundam
 Musical instruments like the guitar are harmonic as they are string instruments. Notice how the wave equation is a linear equation, which means that if $$u_1$$ and $$u_2$$ are valid solutions then $$a u_1 + b u_2$$ is also a valid solution. That means the actual solution for a string instrument is an infinite sum for all the harmonic frequencies with different amplitudes. The relative amplitudes of the overtones are what enable us to distinguish between different instruments. This is what we refer to as **timbre**.
 
 ## Percussion Instruments
-The sounds produced by a percussion instrument comes from a vibrating membrane. If we assume the membrane to have uniform thickness we can attempt to solve the wave equation in **cylindrical coordinates**. Using the Laplacian we get - 
+The sounds produced by a percussion instrument comes from a vibrating membrane. If we assume the membrane to have uniform thickness we can attempt to solve the wave equation in **cylindrical coordinates**. Using the Laplacian we get -
 
 $$
 \frac{\partial^2 u}{\partial r^2} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} = \frac{1}{v^2} \frac{\partial^2 u}{\partial t^2}
@@ -138,7 +138,7 @@ How then are tablas able to produce a harmonic sound? Well the answer lies on th
     </div>
 </div>
 Notice a black circle on the membrane called the _Syahi_. The _Syahi_ is not just a design on the membrane but serves a crucial purpose. It is made with a mixture of flour, water and iron filings. This means that it carries a **non negligible mass** that does not cover the entire surface. This makes the surface mass density **non uniform** that changes the solution to the wave equation in cylindrical coordinates.
-The solution to such an equation is quite complicated and thus a computational solution is required. 
+The solution to such an equation is quite complicated and thus a computational solution is required.
 When accounted for the non uniformity of the _Syahi_ the overtone frequencies are found to be integer multiples of the fundamental, thus making it **harmonic like a guitar**.
 
 Sir C. V. Raman was the first to notice and publish<d-cite key="CVR"></d-cite> this phenomenon in 'Proceeding of Indian Academy of Sciences' in 1934.
