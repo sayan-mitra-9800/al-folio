@@ -24,6 +24,6 @@ I spend half my time preventing models from over-fitting (The other half goes in
 I am interested in a lot of things - math, science, AI (obviously), politics, sociology, anthropology, philosophy, etc.
 
 
-One of my keen interests is trying to understand how the human brain works (Yes, my background in electronics makes me appreciate harware, especially ones that run on coffee!). Although I am critical of the way modern AI-research is conducted, I believe it provides a framework to understand the macroscopic behaviour of the brain and intelligence.
+One of my keen interests is trying to understand how the human brain works (Yes, my background in electronics makes me appreciate hardware, especially ones that run on coffee!). Although I am critical of the way modern AI-research is conducted, I believe it provides a framework to understand the macroscopic behaviour of the brain and intelligence.
 
 This website is mainly intended to be a blog as I dabble though tech, ai, and other things that will put her to sleep.
