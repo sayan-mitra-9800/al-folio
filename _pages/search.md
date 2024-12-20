@@ -78,7 +78,6 @@ nav_order: 3
   // Pressing enter selects the first search result
   searchInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-      console.log('Enter key pressed');
       var firstLink = document.querySelector('#results-container li a');
       if (firstLink) {
         window.location = firstLink.href;
