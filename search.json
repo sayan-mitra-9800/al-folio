@@ -1,17 +1,19 @@
 ---
 ---
 [
-  {% for post in site.posts %}
-    {
-
-      "title"    : "{{ post.title | strip_html | escape }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "category" : "{{post.categories | join: ', '}}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "date"     : "{{ post.date }}",
-      "discription" : "{{post.description | strip_html | strip_newlines | escape }}",
-      "content" : "{{ post.content | strip_html | strip_newlines | escape | remove: '\'| replace: ", ", ' ' | replace: "	", ' ' }}"
-
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+{% assign items = site.posts | concat: site.photos %}
+{% for item in items %}
+  {
+    "type": "{% if item.collection == 'posts' %}post{% elsif item.collection == 'photos' %}photo{% endif %}",
+    "title": "{{ item.title | strip_html | escape }}",
+    "url": "{{ site.baseurl }}{{ item.url }}",
+    "category": "{% if item.categories %}{{ item.categories | join: ', ' }}{% else %}{% endif %}",
+    "tags": "{% if item.tags %}{{ item.tags | join: ', ' }}{% else %}{% endif %}",
+    "date": "{{ item.date | date: '%Y-%m-%d' }}",
+    "description": "{% if item.description %}{{ item.description | strip_html | strip_newlines | escape }}{% else %}{% endif %}",
+    "content": "{% if item.content %}{{ item.content | strip_html | strip_newlines | escape | remove: '\' | replace: ', ', ' ' | replace: '	', ' ' }}{% endif %}",
+    "image_url": "{% if item.image_url %}{{ site.baseurl }}{{ item.image_url }}{% endif %}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
 ]
+
