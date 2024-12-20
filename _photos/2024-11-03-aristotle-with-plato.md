@@ -2,11 +2,7 @@
 layout: photo
 title: Aristotle and Plato
 description: Artwork of Aristotle having a discussion with Plato
-tags: music
-categories: science
-featured: false
 disqus_comments: false
-related_posts: false
 ---
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

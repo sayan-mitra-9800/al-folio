@@ -7,6 +7,7 @@ categories: science
 featured: false
 disqus_comments: true
 related_posts: false
+show_reading_time: true
 
 bibliography: 2024-05-12-harmonic.bib
 
