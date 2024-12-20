@@ -2,69 +2,88 @@
 layout: page
 title: search
 permalink: /search/
-description: 
+description:
 nav: true
 nav_order: 3
 ---
 
 <style>
-  /* Add some styling for the search container */
   #search-container {
     text-align: center !important;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px;
   }
 
-  /* Style the search input */
   #search-input {
-    width: 80%; /* Adjust the width as needed */
-    padding: 10px; /* Adjust the padding as needed */
-    font-size: 16px; /* Adjust the font size as needed */
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
   }
 
-  /* Style the results container */
   #results-container {
     list-style-type: none;
     padding: 0;
-    margin: 20px 0; /* Adjust the margin as needed */
+    margin: 20px 0;
+    text-align: left; /* Aligning results left as before */
   }
 
-  /* Style the search results */
   #results-container li {
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-bottom: 10px;
   }
 
-  /* Style the highlighted search term */
   font[color="#ee82ee"] {
+    /* highlight styling */
+  }
+
+  /* This class can be used to center no results text if you prefer not to use inline styles */
+  .no-results-found {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
   }
 </style>
 
-<!-- Html Elements for Search -->
 <div id="search-container">
   <input type="text" id="search-input" placeholder="Search ↵">
   <ul id="results-container"></ul>
 </div>
 
-<!-- Script pointing to search-script.js -->
 <script src="/js/search-script.js" type="text/javascript"></script>
 
-<!-- Configuration -->
 <script>
+  var searchInput = document.getElementById('search-input');
+
   SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
+    searchInput: searchInput,
     resultsContainer: document.getElementById('results-container'),
-    searchResultTemplate: '<br><div style="text-align: left !important;"><a href="{url}"><h1 style="text-align:left !important;">{title}</h1></a><span style="text-align:left !important;">{content}</span></div>',
+    searchResultTemplate: '<li><a href="{url}"><h2>{title}</h2></a><span>{content}</span></li>',
+    noResultsText: '<li class="no-results-found">No results found</li>',
     templateMiddleware: function (prop, value, template) {
-      if (prop == 'content') {
-        var wordIndex = value.toLowerCase()
-          .indexOf(document.getElementById('search-input').value.toLowerCase());
-        console.log(wordIndex, value);
-        excerpt = value.slice(Math.max(wordIndex - 70, 0), Math.min(wordIndex + 70, value.length));
-        return excerpt.split(' ')
-          .slice(1, excerpt.split(' ').length - 1)
-          .join(' ').toLowerCase()
-          .replace(document.getElementById('search-input').value.toLowerCase(), '<font color="#ee82ee">' + document.getElementById('search-input').value + '</font>');
+      if (prop === 'content') {
+        var searchTerm = searchInput.value.toLowerCase();
+        var lowerValue = value.toLowerCase();
+        var wordIndex = lowerValue.indexOf(searchTerm);
+
+        if (wordIndex >= 0) {
+          var excerpt = value.slice(Math.max(wordIndex - 70, 0), Math.min(wordIndex + 70, value.length));
+          return excerpt.toLowerCase().replace(searchTerm, '<font color="#ee82ee">' + searchInput.value + '</font>');
+        }
+        return value;
       }
+      return value;
     },
     json: '{{ site.baseurl }}/search.json',
   });
+
+  // Pressing enter selects the first search result
+  searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      console.log('Enter key pressed');
+      var firstLink = document.querySelector('#results-container li a');
+      if (firstLink) {
+        window.location = firstLink.href;
+      }
+    }
+  });
 </script>
+
