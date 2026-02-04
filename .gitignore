@@ -9,4 +9,7 @@ _site
 Gemfile.lock
 vendor
 *.sh
+# Docker entrypoint scripts (must be tracked for docker build)
+!bin/entry_point.sh
+!bin/entry_point_nginx.sh
 
