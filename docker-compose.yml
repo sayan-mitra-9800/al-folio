@@ -1,10 +1,23 @@
-# Build with: docker compose build
-# Run with: docker compose up (site at http://localhost:8080)
+# Build: docker compose build [nginx|jekyll]
+# Run:   docker compose up [nginx]     → nginx serves built site at http://localhost:8080
+#        docker compose up jekyll      → Jekyll dev server with live reload at http://localhost:4000
 services:
-  jekyll:
-    build: .
-    image: al-folio-jekyll:latest
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    image: al-folio-nginx:latest
     ports:
       - "8080:8080"
     volumes:
       - .:/srv/jekyll
+
+  jekyll:
+    build: .
+    image: al-folio-jekyll:latest
+    ports:
+      - "4000:8080"
+    volumes:
+      - .:/srv/jekyll
+    profiles:
+      - dev
