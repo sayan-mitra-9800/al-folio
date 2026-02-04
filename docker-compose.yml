@@ -7,6 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     image: al-folio-nginx:latest
+    restart: unless-stopped
     ports:
       - "8080:8080"
     volumes:
@@ -15,6 +16,7 @@ services:
   jekyll:
     build: .
     image: al-folio-jekyll:latest
+    restart: unless-stopped
     ports:
       - "4000:8080"
     volumes:
